@@ -1,0 +1,77 @@
+@media screen and ( max-width:1100px )
+    section#main-content
+        #content
+            justify-content: center
+            #headline
+                width: 100%
+                h1
+                    width: auto
+            #illustration
+                display: none
+@media screen and ( max-width:1070px )
+    nav
+        #contents
+            margin: 0px 5%
+            display: flex
+            align-items: center
+            height: 100%
+            #left
+                width: 20%
+                #text
+                    display: none
+            #right
+                width: 80%
+@media screen and ( max-width:850px )
+    nav #contents
+        #left
+            width: 100%
+            #text
+                display: flex
+        #right
+            width: auto
+            .hamburger
+                display: flex
+            .lists
+                position: fixed
+                top: 60px
+                left: 0
+                width: 100%
+                height: calc( 100vh - 60px )
+                background: rgba(255,255,255,0.15)
+                display: none
+                ul
+                    position: fixed
+                    top: 60px
+                    left: 0
+                    height: calc( 100vh - 60px )
+                    width: 300px
+                    background: #fff
+                    display: block
+                    overflow-y: auto
+                    .nav-links
+                        display: block
+                        &:last-child
+                            background: none
+                            span
+                                color: #050505
+                                font-weight: 600
+                        &.nav-links
+                            span
+                                font-weight: 600
+                        &.link-hover
+                            .hover-container
+                                position: relative
+                                min-width: auto
+                                display: flex
+                                justify-content: flex-start
+                                display: none
+                                &::before
+                                    display: none
+                                .content
+                                    background: transparent
+                                    box-shadow: none
+                                    margin-top: auto
+                                    min-width: auto
+                                    border-radius: 0px
+                                    a span
+                                        font-weight: 500

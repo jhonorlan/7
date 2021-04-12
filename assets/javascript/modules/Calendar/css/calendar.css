@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+}
+
+.calendar-table-container {
+  padding: 10px;
+}
+
+.calendar-table-container .calendar-header {
+  position: relative;
+}
+
+.calendar-table-container .calendar-header h2 {
+  margin: 5px 5px;
+  outline: none;
+}
+
+.calendar-table-container .calendar-header .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.calendar-table-container .calendar-header .buttons .button {
+  font-size: 14px;
+  padding: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.calendar-table-container .calendar-header .buttons .button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.calendar-table-container .calendar-table {
+  width: 100%;
+}
+
+.calendar-table-container .calendar-table th, .calendar-table-container .calendar-table td {
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.calendar-table-container .calendar-table th {
+  height: 50px;
+  border-bottom: 1px solid #EBEEEE;
+}
+
+.calendar-table-container .calendar-table td span {
+  padding: 5px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.calendar-table-container .calendar-table td span:hover {
+  background: #6BB0FF;
+  color: #ffffff;
+}
+
+.calendar-table-container .calendar-table td.active span {
+  background: #6BB0FF;
+  color: #fff;
+}
+
+.calendar-table-container .calendar-table td:hover .description {
+  visibility: visible;
+}
+
+.calendar-table-container .calendar-table td.todays-date span {
+  background: #605CA8;
+  color: #ffffff;
+}
+
+.calendar-table-container .calendar-table td.todays-date .description {
+  background: #605CA8;
+}
+
+.calendar-table-container .calendar-table td.targets-date span {
+  background: #4BDDC0;
+  color: #ffffff;
+}
+
+.calendar-table-container .calendar-table td.targets-date .description {
+  background: #4BDDC0;
+}
+
+.calendar-table-container .calendar-table td.event-date span {
+  background: #FFC674;
+  color: #ffffff;
+}
+
+.calendar-table-container .calendar-table td.event-date .description {
+  background: #FFC674;
+}
+
+.calendar-table-container .calendar-table td .description {
+  position: absolute;
+  top: -25px;
+  max-width: 200px;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 4px 15px -9px rgba(0, 0, 0, 0.69);
+          box-shadow: 3px 4px 15px -9px rgba(0, 0, 0, 0.69);
+  text-align: center;
+  visibility: hidden;
+}
+
+.calendar-table-container .calendar-table td .description p {
+  color: #ffffff;
+  margin: 5px;
+  font-size: 12px;
+}
+/*# sourceMappingURL=Calendar.css.map */

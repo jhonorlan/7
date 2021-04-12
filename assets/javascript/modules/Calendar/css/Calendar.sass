@@ -1,0 +1,81 @@
+*
+    margin: 0
+.calendar-table-container
+    padding: 10px
+
+    .calendar-header
+        position: relative
+        h2
+            margin: 5px 5px
+            outline: none
+        .buttons
+            display: flex
+            position: absolute
+            right: 0
+            top: 0
+            .button
+                font-size: 14px
+                padding: 5px
+                cursor: pointer
+                user-select: none
+                &:active
+                    transform: scale(0.9)
+    .calendar-table
+        width: 100%
+        th,td
+            padding: 5px
+            text-align: center
+            cursor: pointer
+            position: relative
+        th
+            height: 50px
+            border-bottom: 1px solid #EBEEEE
+        td
+            span
+                padding: 5px
+                border-radius: 50%
+                width: 30px
+                height: 30px
+                display: flex
+                justify-content: center
+                align-items: center
+                &:hover
+                    background: #6BB0FF
+                    color: #ffffff
+            &.active
+                span
+                    background: #6BB0FF
+                    color: #fff
+            &:hover
+                .description
+                    visibility: visible
+            &.todays-date
+                span
+                    background: #605CA8
+                    color: #ffffff
+                .description
+                    background: #605CA8
+            &.targets-date
+                span
+                    background: #4BDDC0
+                    color: #ffffff
+                .description
+                    background: #4BDDC0
+            &.event-date
+                span
+                    background: #FFC674
+                    color: #ffffff
+                .description
+                    background: #FFC674
+            .description
+                position: absolute
+                top: -25px
+                max-width: 200px
+                border-radius: 5px
+                box-shadow: 3px 4px 15px -9px rgba(0,0,0,0.69)
+                text-align: center
+                visibility: hidden
+                p
+                    color: #ffffff
+                    margin: 5px
+                    font-size: 12px

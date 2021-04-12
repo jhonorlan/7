@@ -1,0 +1,747 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+body
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    background: #F0F2F5
+a
+    color: #050505
+    text-decoration: none
+// ---------- //
+nav
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 60px
+    background: #FFFFFF
+    // &.active
+    box-shadow: -1px 8px 23px -16px rgba(0,0,0,0.19)
+
+    z-index: 999
+    #contents
+        margin: 0px 5%
+        display: flex
+        align-items: center
+        height: 100%
+        #left
+            width: 38%
+            display: flex
+            align-items: center
+            cursor: pointer
+            #logo
+                // border: 1px solid #ebeeee
+                display: flex
+                justify-content: center
+                img
+                    height: 40px
+                    border-radius: 50%
+            #text
+                margin: 10px
+                h2
+                    color: #050505
+                    font-size: 24px
+        #right
+            display: flex
+            justify-content: flex-end
+            width: 70%
+            .hamburger
+                width: 40px
+                height: 40px
+                border-radius: 10px
+                display: flex
+                justify-content: center
+                align-items: center
+                cursor: pointer
+                display: none
+                &:hover
+                    background: #ebeeee
+                &:active
+                    transform: scale(0.9)
+                .particles
+                    .particle
+                        height: 5px
+                        background: #050505
+                        margin: 2.5px
+                        &:nth-child(1)
+                            width: 30px
+                        &:nth-child(2)
+                            width: 20px
+                        &:nth-child(3)
+                            width: 10px
+
+            ul
+                display: flex
+                .nav-links
+                    position: relative
+                    list-style-type: none
+                    padding: 10px
+                    cursor: pointer
+                    margin: 0px 5px
+                    display: flex
+                    justify-content: center
+                    align-content: center
+                    &:hover
+                        background: #ebeeee
+                    &:last-child
+                        background: #6777C3
+                        min-width: 100px
+                        border-radius: 6px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        padding: 10px 14px
+                        &:active
+                            transform: scale(0.9)
+                        span
+                            color: #fff
+                            font-weight: 600
+                    span
+                        user-select: none
+                    &.link-hover
+                        .hover-container
+                            position: absolute
+                            top: 100%
+                            min-width: 200px
+                            display: none
+                            justify-content: center
+                            background: transparent
+                            z-index: 999
+                            &::before
+                                content: ""
+                                position: absolute
+                                top: 10px
+                                width: 0
+                                height: 0
+                                border-left: 20px solid transparent
+                                border-right: 20px solid transparent
+
+                                border-bottom: 20px solid #fff
+                                box-shadow: 5px 5px 34px -15px rgba(0,0,0,0.6)
+                            .content
+                                background: #fff
+                                margin-top: 30px
+                                min-width: 200px
+                                padding: 5px
+                                border-radius: 5px
+                                box-shadow: -1px 8px 23px -6px rgba(0,0,0,0.61)
+                                a
+                                    color: #050505
+                                    text-decoration: none
+                                    display: block
+                                    padding: 8px
+                                    &:hover
+                                        background: #ebeeee
+
+                        &:hover
+                            .hover-container
+                                display: flex
+
+// ______________ NAVBAR END _______________________________ //
+
+// _______________ BODY _______________________________ //
+section
+    &#main-content
+        margin-top: 60px
+        height: calc( 100vh - 60px )
+        #wave
+            position: relative
+            width: 100%
+            height: 100%
+            img
+                position: absolute
+                bottom: 0
+                user-select: none
+                -webkit-user-drag: none
+        #content
+            display: flex
+            width: 90%
+            height: 70%
+            position: absolute
+            margin-left: 5%
+            margin-top: 5%
+            z-index: 2
+            display: flex
+            #headline
+                width: 60%
+
+                h3
+
+                h1
+                    font-size: 40px
+                    width: 80%
+                    margin-top: 20px
+                    color: #050505
+                .buttons
+                    display: flex
+                    margin-top: 30px
+                    button
+                        padding: 12px 16px
+                        border: none
+                        background: #fff
+                        outline: none
+                        margin-top: 10px
+                        margin: 5px
+                        border-radius: 4px
+                        cursor: pointer
+                        span
+                            font-size: 15px
+                            font-weight: 600
+            #illustration
+                width: 60%
+                height: 100%
+                display: flex
+                justify-content: center
+                position: absolute
+                right: 0%
+                .card-illustration-parent
+                    margin-top: 20px
+                    margin-right: 30%
+                    position: relative
+                    .card-illustration
+                        width: 250px
+                        height: 400px
+                        background: #fff
+                        border: 1px solid #ebeeee
+                        position: absolute
+                        cursor: pointer
+                        transition: 0.2s all
+                        box-shadow: 1px 3px 22px -9px #000000
+                        &:nth-child(1)
+                            transform: rotate(-30deg)
+                            margin-left: -100px
+                            &:hover
+                                transform: rotate(0deg)
+                                margin-left: -280px
+
+                        &:nth-child(2)
+                            transform: rotate(30deg)
+                            margin-left: 100px
+                            &:hover
+                                transform: rotate(0deg)
+                                margin-left: 280px
+                        &:nth-child(3)
+                            &:hover
+                                margin-top: -20px
+    // ____________________ ACADEMICS __________________________________________
+    &#academics
+        min-height: 100vh
+        background: rgb(102,116,195)
+        background: linear-gradient(90deg, #6674c3 0%, #a4d8fa 100%)
+        #contents
+            margin: 0px 5%
+            #content
+                #head
+                    padding: 12px
+                    h3
+                        font-size: 24px
+                        color: #fff
+                #body
+                    padding: 12px
+                    // display: flex
+                    // justify-content: center
+                    // align-items: center
+                    .item
+                        margin: 10px
+                        display: inline-block
+                        min-width: 150px
+                        min-height: 200px
+                        max-width: 200px
+                        background: #fff
+                        cursor: pointer
+                        border-radius: 6px
+                        transition: 0.2s all
+                        &:hover
+                            transform: rotate(2deg)
+                        .top
+                            height: 150px
+                            border-bottom: 1px solid #ebeeee
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            img,svg
+                                width: 100px
+                                height: auto
+                        .bot
+                            padding: 12px
+                            text-align: center
+                            span
+                                font-size: 15px
+                                font-weight: 600
+    &#enroll-now
+        display: flex
+        justify-content: center
+        align-items: center
+        min-height: 400px
+        #contents
+            margin: 0px 5%
+            #headline
+                text-align: center
+                h1
+                    font-size: 54px
+            #content
+                margin: 15px
+                display: flex
+                .item
+                    margin: 10px
+                    padding: 14px
+                    text-align: center
+                    .top
+                        span
+                            font-size: 38px
+                            font-weight: 600
+                    .bot
+                        span
+                            font-size: 24px
+                            margin: 5px
+
+    // _________________ EVENTS AND CALLENDAR ___________________________
+    &#events-and-calendar
+        min-height: 500px
+        padding: 0px 5%
+        display: flex
+        justify-content: center
+        align-items: center
+        .events-and-calendar-container
+            width: 100%
+            padding: 10px
+            display: flex
+            #calendar
+                width: 60%
+            #events
+                width: 400px
+                height: auto
+
+    &#headline
+        margin-top: 60px
+        #contents
+            margin: 0px 5%
+            background: #FFF
+            border-bottom-left-radius: 20px
+            border-bottom-right-radius: 20px
+            box-shadow: -1px 8px 23px -16px rgba(0,0,0,0.19)
+
+            #content
+                padding: 15px
+                #items
+                    display: flex
+                    align-items: center
+                    .item
+                        padding: 5px
+                        font-size: 12px
+                        background: #6777C3
+                        color: #fff
+                        margin: 2.5px
+                        border-radius: 2px
+                        cursor: pointer
+                        user-select: none
+                        &:active
+                            transform: scale(0.9)
+                    .point
+                        border-left: 8px solid gray
+                        border-right: 8px solid transparent
+                        border-top: 8px solid transparent
+                        border-bottom: 8px solid transparent
+                        margin-left: 5px
+                        cursor: pointer
+                        &:active
+                            transform: scale(0.9)
+    &#slideshow
+        margin: 20px 5%
+        #contents
+            padding: 10px
+            display: flex
+            .rows
+                height: 500px
+                width: 80%
+                margin: 0px 10%
+                background: #ebeeee
+                position: relative
+                display: flex
+                .row-1
+                    width: 70%
+                    height: 100%
+                    position: relative
+                    display: flex
+                    .button-container
+                        width: 20%
+                        height: 100%
+                        cursor: pointer
+                        position: relative
+                        display: flex
+                        align-items: center
+                        &:hover
+                            &.left
+                                .icon
+                                    right: 20px
+                            &.right
+                                .icon
+                                    left: 20px
+
+                        .icon
+                            width: 50px
+                            height: 50px
+                            padding: 10px
+                            position: absolute
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            background: #fff
+                            border-radius: 50%
+                            box-shadow: 5px 5px 34px -15px rgba(0,0,0,0.6)
+                            img,svg
+                                width: 25px
+                                user-select: none
+                                -webkit-user-drag: none
+
+                        &.left
+                            border-right: 1px solid #ebeeee
+                            .icon
+                                right: 10px
+                                img
+                                    transform: rotate(180deg)
+                        &.right
+                            border-left: 1px solid #ebeeee
+                            .icon
+                                left: 10px
+                    .main-image
+                        width: 60%
+                        background: #fff
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        position: relative
+                        .image
+                            width: 100%
+                            height: 80%
+                            background: #E9F3FF
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            img
+                                width: 100%
+                                height: auto
+
+                .row-2
+                    width: 30%
+                    padding: 10px
+                    height: 100%
+                    overflow-y: hidden
+                    .images
+                        display: block
+                        .item
+                            padding: 10px
+                            height: 150px
+                            margin: 10px
+                            background: #fff
+                            cursor: pointer
+                            transition: 0.2s all
+                            &:hover
+                                box-shadow: -1px 8px 23px -16px rgba(0,0,0,0.19)
+                                transform: scale(1.05)
+                            img
+                                width: 100%
+                                height: 100%
+// _______________ BODY END _______________________________ //
+
+// _______________ ARTICLES _______________________________ //
+
+article
+    &#table
+        #body
+            padding: 10px
+            margin: 20px 5%
+            .atable
+                background: #fff
+                border-radius: 6px
+                .head
+                    width: 100%
+                    padding: 20px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-bottom: 1px solid #ebeeee
+                    .item
+                        width: 100%
+                        cursor: pointer
+                        span
+                            font-weight: 600
+                .body
+                    width: 100%
+                    display: flex
+                    padding: 20px
+                    .content
+                        width: 100%
+                        .td-item
+                            padding: 8px
+                            cursor: pointer
+                            &:hover
+                                background: #ebeeee
+
+    &#story
+        margin: 25px 5%
+        font-size: 17px
+        .head
+            text-align: center
+            margin: 20px 0px
+            h1
+                font-size: 30px
+            h2
+                font-size: 24px
+                color: gray
+        .centerized-image
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 500px
+        .body
+            p
+                text-indent: 5%
+                text-align: justify
+                margin: 10px 0px
+            a
+                &#hover
+                    color: #1877F2
+                    font-weight: 600
+                    text-decoration: underline
+                    cursor: pointer
+                    position: relative
+                    z-index: 10
+                    &:hover
+                        .hovered
+                            display: flex
+                            justify-content: center
+                    .hovered
+                        position: absolute
+                        bottom: calc( -100% + 70px )
+                        left: 0
+                        width: 110px
+                        height: 110px
+                        background: #fff
+                        box-shadow: -1px 8px 23px -16px rgba(0,0,0,0.19)
+                        border: 1px solid #ebeeee
+                        border-radius: 5px 5px 5px 0px
+                        padding: 5px
+                        display: none
+                        img
+                            width: 100%
+                            height: 100%
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 100%
+                            width: 0
+                            height: 0
+                            border-left: 20px solid transparent
+                            border-right: 20px solid transparent
+
+                            border-top: 20px solid #fff
+                            box-shadow: 5px 5px 34px -15px rgba(0,0,0,0.6)
+            .heading
+                margin: 10px 0px
+            .lists
+                .top
+                    padding: 12px
+                    span
+                        font-weight: 600
+                .bot
+                    padding: 12px
+                    .items .item
+                        display: flex
+                        margin: 5px
+                        .left
+                            min-width: 30px
+                            max-height: 40px
+                            background: #1877F2
+                            text-align: center
+                            padding: 10px
+                            span
+                                color: #fff
+                        .right
+                            margin-left: 10px
+                            padding: 2px
+                            .item
+                                .left
+                                    background: #6777C3
+    &#hymn
+        padding: 20px
+        .audio
+            width: 100%
+            display: flex
+            justify-content: center
+            align-items: center
+        .heading
+            text-align: center
+            h1
+                font-size: 32px
+        .body
+            margin: 20px
+            .content
+                text-align: center
+                .verse
+                    margin-top: 10px
+
+    &#image
+        .rows
+            margin: 20px 5%
+            display: flex
+            .row-1
+                width: 60%
+                .image
+                    // display: flex
+                    // justify-content: center
+                    // align-items: center
+                    &.img-magnifier-container
+                        position: relative
+                        .img-magnifier-glass
+                            position: absolute
+                            border: 3px solid #000
+                            border-radius: 50%
+                            cursor: none
+                            width: 100px
+                            height: 100px
+                    img
+                        width: 300px
+
+            .row-2
+                width: 100%
+                .cards
+                    display: flex
+                    margin: 10px
+                    &.not-flex
+                        display: block
+                    .card
+                        min-width: 200px
+                        // height: 200px
+                        background: #fff
+                        margin: 10px
+                        padding: 10px
+                        border-radius: 5px
+                        box-shadow: -1px 8px 23px -16px rgba(0,0,0,0.19)
+                        cursor: pointer
+                        // transition: 0.2s all
+                        .top
+                            border-bottom: 1px solid #ebeeee
+                        .bot
+                            padding: 5px
+                        &:hover
+                            transform: scale(1.05)
+// _______________ ARTICLED END ________________________ // 
+
+// _______________ FOOTER ___________________________ //
+footer
+    // height: 300px
+    background: #192136
+    position: relative
+    margin-top: 150px
+    .sub-footer
+        position: absolute
+        width: 70%
+        height: 200px
+        background: #F3EFFE
+        margin-left: 15%
+        border-radius: 15px
+        top: -100px
+        box-shadow: -1px -1px 17px -3px #000000
+        .content
+            padding: 50px 40px
+            h2
+                font-size: 28px
+                color: #9F82E6
+            h3
+                color: #5A48B1
+            .button
+                float: right
+                background: #6777C3
+                min-width: 100px
+                border-radius: 6px
+                display: flex
+                justify-content: center
+                align-items: center
+                padding: 12px 14px
+                cursor: pointer
+                &:active
+                    transform: scale(0.9)
+                span
+                    font-weight: 600
+                    color: #fff
+                    user-select: none
+    .division
+        height: 120px
+    #content
+        .rows
+            display: flex
+            widows: 100%
+            .row
+                width: 100%
+                height: auto
+                padding: 12px
+                .links
+                    a
+                        padding: 12px
+                        display: block
+                        color: #fff
+                        &:hover
+                            text-decoration: underline
+                        span
+                            color: #fff
+                &.row-1
+                    .top
+                        padding: 5px
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        .logo
+                            width: 150px
+                            height: 150px
+                            // border: 1px solid #fff
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            padding: 10px
+                            cursor: pointer
+                            border-radius: 6px
+                            &:hover
+                                img
+                                    filter: grayscale(0%)
+                                    margin-top: -10px
+                            img
+                                width: 100%
+                                height: auto
+                                filter: grayscale(100%)
+                                transition: 0.2s all
+                    .bot
+                        text-align: center
+                        padding: 5px
+                        p
+                            font-size: 12px
+                            color: #fff
+
+// ______BRANDS _________________
+#brands
+    position: relative
+    #content
+        display: flex
+        justify-content: center
+        align-items: center
+        #items
+            display: flex
+            .item
+                width: 40px
+                margin: 10px
+                cursor: pointer
+                padding: 5px
+                border-radius: 6px
+                &:hover
+                    img
+                        filter: grayscale(0%)
+                        margin-top: -5px
+                img
+                    width: 100%
+                    -webkit-user-drag: none
+                    user-select: none
+                    filter: grayscale(100%)
+                    transition: 0.2s all
+@import ./Responsive

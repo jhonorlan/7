@@ -1,0 +1,115 @@
+@media screen and (max-width: 1100px) {
+  section#main-content #content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section#main-content #content #headline {
+    width: 100%;
+  }
+  section#main-content #content #headline h1 {
+    width: auto;
+  }
+  section#main-content #content #illustration {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  nav #contents {
+    margin: 0px 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+  }
+  nav #contents #left {
+    width: 20%;
+  }
+  nav #contents #left #text {
+    display: none;
+  }
+  nav #contents #right {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  nav #contents #left {
+    width: 100%;
+  }
+  nav #contents #left #text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav #contents #right {
+    width: auto;
+  }
+  nav #contents #right .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav #contents #right .lists {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc( 100vh - 60px);
+    background: rgba(255, 255, 255, 0.15);
+    display: none;
+  }
+  nav #contents #right .lists ul {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc( 100vh - 60px);
+    width: 300px;
+    background: #fff;
+    display: block;
+    overflow-y: auto;
+  }
+  nav #contents #right .lists ul .nav-links {
+    display: block;
+  }
+  nav #contents #right .lists ul .nav-links:last-child {
+    background: none;
+  }
+  nav #contents #right .lists ul .nav-links:last-child span {
+    color: #050505;
+    font-weight: 600;
+  }
+  nav #contents #right .lists ul .nav-links.nav-links span {
+    font-weight: 600;
+  }
+  nav #contents #right .lists ul .nav-links.link-hover .hover-container {
+    position: relative;
+    min-width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    display: none;
+  }
+  nav #contents #right .lists ul .nav-links.link-hover .hover-container::before {
+    display: none;
+  }
+  nav #contents #right .lists ul .nav-links.link-hover .hover-container .content {
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin-top: auto;
+    min-width: auto;
+    border-radius: 0px;
+  }
+  nav #contents #right .lists ul .nav-links.link-hover .hover-container .content a span {
+    font-weight: 500;
+  }
+}
+/*# sourceMappingURL=Responsive.css.map */
